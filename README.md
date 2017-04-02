@@ -5,7 +5,7 @@ Este projeto contém alguns exemplos de arquivos do docker-compose que uso para 
 
 - Criar um volume no docker para armazenar os dados db do mongo(necessário para windows 10)
 	```
-	docker volume create --name mongodata
+	docker volume create --name=mongodata
 	```
 - Definir a pasta onde estará o projeto na máquina local e colocar na opção: [local_path]
 - Para instalar o nodemon basta alterar a linha command(web)
