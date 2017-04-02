@@ -1,0 +1,29 @@
+version: '2'
+
+services:
+  db:
+    image: mongo
+    volumes:
+      - mongodata:/data/db
+    ports:
+      - 27017:27017
+    networks:
+      - new
+
+  web:
+    image: node/nodemon 
+    volumes:
+      - //c/Users/jaqueline/nodejs/express/contatos:/usr/src/app
+    working_dir: /usr/src/app
+    command: sh -c 'npm install; nodemon app'
+    depends_on:
+      - db
+    ports:
+      - 3000:3000
+    networks:
+      - new
+volumes:
+  mongodata:
+    
+networks:
+  new:
