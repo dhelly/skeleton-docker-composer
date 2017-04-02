@@ -11,9 +11,9 @@ services:
       - new
 
   web:
-    image: node/nodemon 
+    image: node 
     volumes:
-      - //c/Users/jaqueline/nodejs/express/contatos:/usr/src/app
+      - [local_path]:/usr/src/app
     working_dir: /usr/src/app
     command: sh -c 'npm install; nodemon app'
     depends_on:
