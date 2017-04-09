@@ -1,0 +1,2 @@
+Rodar o mysql na linha de comando
+docker run --name mysql -e MYSQL_ROOT_PASSWORD=root -v $(pwd):/var/lib/mysql -p 3306:3306 -d mysql
